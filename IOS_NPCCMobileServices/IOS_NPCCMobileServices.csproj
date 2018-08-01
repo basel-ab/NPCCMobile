@@ -99,10 +99,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\logo.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\logo.imageset\logo.png" />
+    <ImageAsset Include="Assets.xcassets\night-stars-wallpaper.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\night-stars-wallpaper.imageset\night-stars-wallpaper-1.png" />
+    <ImageAsset Include="Assets.xcassets\night-stars-wallpaper.imageset\night-stars-wallpaper-2.png" />
+    <ImageAsset Include="Assets.xcassets\night-stars-wallpaper.imageset\night-stars-wallpaper.png" />
+    <ImageAsset Include="Assets.xcassets\facebook-icon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\facebook-icon.imageset\facebook-icon-1.png" />
+    <ImageAsset Include="Assets.xcassets\facebook-icon.imageset\facebook-icon-2.png" />
+    <ImageAsset Include="Assets.xcassets\facebook-icon.imageset\facebook-icon.png" />
+    <ImageAsset Include="Assets.xcassets\twitter-icon.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\twitter-icon.imageset\twitter-icon-1.png" />
+    <ImageAsset Include="Assets.xcassets\twitter-icon.imageset\twitter-icon-2.png" />
+    <ImageAsset Include="Assets.xcassets\twitter-icon.imageset\twitter-icon.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
