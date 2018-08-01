@@ -10,11 +10,10 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
-using static ModelLibrary.clsEnum;
 
 namespace ModelLibrary
 {
-    public class  Authentication
+    public class  NpccAuthenticationModel
     {
         public bool IsBusy { get; set; }
 

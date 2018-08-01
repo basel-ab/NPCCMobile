@@ -36,7 +36,7 @@ namespace IOS_NPCCMobileServices
                 SVProgressHUD.SetDefaultMaskType(SVProgressHUDMaskType.Black);
                 SVProgressHUD.ShowWithStatus("Checking Your Details...");
 
-                Authentication oauth = new Authentication();
+                NpccAuthenticationModel oauth = new NpccAuthenticationModel();
                 LoginInfo lg = await oauth.Login(txtUsername.Text, txtPassword.Text);
 
                 SVProgressHUD.Dismiss();

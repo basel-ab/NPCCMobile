@@ -9,7 +9,7 @@ namespace IOS_NPCCMobileServices
     [Register("AppDelegate")]
     public class AppDelegate : UIApplicationDelegate
     {
-        public Authentication oauth;
+        public NpccAuthenticationModel oauth;
 
         public override UIWindow Window
         {
@@ -50,7 +50,7 @@ namespace IOS_NPCCMobileServices
         //Override FinishedLaunching. This executes after the app has started.
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            oauth = new Authentication();
+            oauth = new NpccAuthenticationModel();
             //isAuthenticated can be used for an auto-login feature, you'll have to implement this
             //as you see fit or get rid of the if statement if you want.
             if (oauth.IsAuthenticatedCheckAsync().Result)
