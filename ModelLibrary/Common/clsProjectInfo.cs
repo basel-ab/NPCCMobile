@@ -1,7 +1,7 @@
 ﻿using System;
 namespace ModelLibrary
 {
-    public class ProjectInfo
+    public class clsProjectInfo
     {
         string cProjType { get; set; }
         int cProjYear { get; set; }

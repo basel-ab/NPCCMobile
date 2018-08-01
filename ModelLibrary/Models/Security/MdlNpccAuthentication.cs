@@ -13,7 +13,7 @@ using Xamarin.Essentials;
 
 namespace ModelLibrary
 {
-    public class  NpccAuthenticationModel
+    public class  MdlNpccAuthentication
     {
         public bool IsBusy { get; set; }
 
@@ -35,7 +35,7 @@ namespace ModelLibrary
             return mac;
         }
 
-        public async Task<LoginInfo> Login(string username, string password)
+        public async Task<clsLoginInfo> Login(string username, string password)
         {
             if (IsBusy)
                 return null;
@@ -57,7 +57,7 @@ namespace ModelLibrary
                 var response = await client.PostAsync(client.BaseAddress, content);
                 response.EnsureSuccessStatusCode();
                 var jsonResult = response.Content.ReadAsStringAsync().Result;
-                var Login_Info = JsonConvert.DeserializeObject<LoginInfo>(jsonResult);
+                var Login_Info = JsonConvert.DeserializeObject<clsLoginInfo>(jsonResult);
 
                 return Login_Info;
             }

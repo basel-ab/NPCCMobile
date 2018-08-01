@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace ModelLibrary
 {
-    public class NPCCWebServicesModel
+    public class MdlNpccWebServices
     {
         
     }
