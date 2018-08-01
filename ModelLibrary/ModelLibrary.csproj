@@ -10,9 +10,6 @@
     <PackageReference Include="Xamarin.Essentials" Version="0.9.1-preview" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="WeatherResult.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Common\" />
     <Folder Include="Models\" />
     <Folder Include="Models\Security\" />
