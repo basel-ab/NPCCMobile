@@ -115,10 +115,19 @@
     <ImageAsset Include="Assets.xcassets\twitter-icon.imageset\twitter-icon-2.png" />
     <ImageAsset Include="Assets.xcassets\twitter-icon.imageset\twitter-icon.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LoginBackground.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\SplashScreenBackground.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\LoginBackground.imageset\npcc-Login-Background 2.jpg" />
+    <ImageAsset Include="Assets.xcassets\LoginBackground.imageset\npcc-Login-Background 3.jpg" />
+    <ImageAsset Include="Assets.xcassets\SplashScreenBackground.imageset\npcc-splash-screen.jpg" />
+    <ImageAsset Include="Assets.xcassets\SplashScreenBackground.imageset\npcc-splash-screen 2.jpg" />
+    <ImageAsset Include="Assets.xcassets\SplashScreenBackground.imageset\npcc-splash-screen 3.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Assets.xcassets\logo.imageset\" />
+    <Folder Include="Assets.xcassets\LoginBackground.imageset\" />
+    <Folder Include="Assets.xcassets\SplashScreenBackground.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />

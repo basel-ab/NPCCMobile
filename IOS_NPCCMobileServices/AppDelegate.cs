@@ -53,7 +53,7 @@ namespace IOS_NPCCMobileServices
             oauth = new MdlNpccAuthentication();
             //isAuthenticated can be used for an auto-login feature, you'll have to implement this
             //as you see fit or get rid of the if statement if you want.
-            if (!oauth.IsAuthenticatedCheckAsync().Result)
+            if (oauth.IsAuthenticatedCheckAsync().Result)
             {
                 //We are already authenticated, so go to the main tab bar controller;
                 var tabBarController = GetViewController(MainStoryboard, "InitialController");

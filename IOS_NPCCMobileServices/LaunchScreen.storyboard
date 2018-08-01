@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,40 +18,25 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="1078" translatesAutoresizingMaskIntoConstraints="NO" image="logo" clearsContextBeforeDrawing="NO">
-                                <rect key="frame" x="87" y="304" width="240" height="128"/>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="1078">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcom to NPCC mobile App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1287" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="20" y="174" width="374" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <constraints>
-                                    <constraint id="1291" firstItem="1287" firstAttribute="height" constant="40"/>
-                                </constraints>
-                            </label>
                         </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint id="1079" firstItem="1078" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="284"/>
-                            <constraint id="1080" firstItem="Ze5-6b-2t3" firstAttribute="trailingMargin" secondItem="1078" secondAttribute="trailing" constant="67"/>
-                            <constraint id="1081" firstItem="1078" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="67"/>
-                            <constraint id="1082" firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="1078" secondAttribute="bottom" constant="304"/>
-                            <constraint id="1288" firstItem="Ze5-6b-2t3" firstAttribute="trailingMargin" secondItem="1287" secondAttribute="trailing"/>
-                            <constraint id="1289" firstItem="1287" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin"/>
-                            <constraint id="1290" firstItem="1287" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="154"/>
+                            <constraint firstItem="1078" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="7EB-UI-elT"/>
+                            <constraint firstItem="1078" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="IHC-kC-Vlu"/>
+                            <constraint firstItem="1078" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="Xr1-wm-J7g"/>
+                            <constraint firstItem="1078" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pBL-xC-t3I"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.6627"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="logo" width="129" height="30"/>
-    </resources>
 </document>

@@ -20,35 +20,21 @@ namespace IOS_NPCCMobileServices
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel lblAuthResault { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel lblToken { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtPassword { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtUsername { get; set; }
 
+        [Action ("didTapLoginButton:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void didTapLoginButton (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (btnLogin != null) {
                 btnLogin.Dispose ();
                 btnLogin = null;
-            }
-
-            if (lblAuthResault != null) {
-                lblAuthResault.Dispose ();
-                lblAuthResault = null;
-            }
-
-            if (lblToken != null) {
-                lblToken.Dispose ();
-                lblToken = null;
             }
 
             if (txtPassword != null) {
