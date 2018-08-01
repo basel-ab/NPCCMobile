@@ -34,10 +34,13 @@ namespace IOS_NPCCMobileServices
             {
                 SVProgressHUD.SetDefaultMaskType(SVProgressHUDMaskType.Black);
                 SVProgressHUD.ShowWithStatus("Checking Your Details...");
-                NPCCWebServicesModel ws = new NPCCWebServicesModel();
-                LoginInfo lg = await ws.Login(txtUsername.Text, txtPassword.Text);
+
+                Authentication oauth = new Authentication();
+                LoginInfo lg = await oauth.Login(txtUsername.Text, txtPassword.Text);
+
                 SVProgressHUD.Dismiss();
                 SVProgressHUD.SetDefaultMaskType(SVProgressHUDMaskType.None);
+
                 if(lg.Authenticated == LoginResault.SuccessfullyAuthenticated)
                 {
                     await SecureStorage.SetAsync("oauth_token", lg.Token);

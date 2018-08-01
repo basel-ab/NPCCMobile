@@ -2,13 +2,15 @@
 
 using Foundation;
 using UIKit;
-using Xamarin.Essentials;
+using ModelLibrary;
 
 namespace IOS_NPCCMobileServices
 {
     [Register("AppDelegate")]
     public class AppDelegate : UIApplicationDelegate
     {
+        public Authentication oauth;
+
         public override UIWindow Window
         {
             get;
@@ -48,9 +50,10 @@ namespace IOS_NPCCMobileServices
         //Override FinishedLaunching. This executes after the app has started.
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
+            oauth = new Authentication();
             //isAuthenticated can be used for an auto-login feature, you'll have to implement this
             //as you see fit or get rid of the if statement if you want.
-            if (IsAuthenticatedCheck().Result)
+            if (oauth.IsAuthenticatedCheckAsync().Result)
             {
                 //We are already authenticated, so go to the main tab bar controller;
                 var tabBarController = GetViewController(MainStoryboard, "InitialTab");
@@ -65,12 +68,6 @@ namespace IOS_NPCCMobileServices
             }
 
             return true;
-        }
-
-        private async System.Threading.Tasks.Task<bool> IsAuthenticatedCheck()
-        {
-            var oauthToken = await SecureStorage.GetAsync("oauth_token");
-            return false;
         }
 
         void LoginController_OnLoginSuccess(object sender, EventArgs e)
