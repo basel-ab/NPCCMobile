@@ -10,24 +10,12 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
+using static ModelLibrary.clsEnum;
 
 namespace ModelLibrary
 {
     public class  Authentication
     {
-
-        public enum RequestType
-        {
-            Projects = 1
-        }
-
-        public enum ErrorType
-        {
-            ErrorOccurred = 0,
-            InvalidToken = 1,
-            InvalidRequestType = 2
-
-        }
         public bool IsBusy { get; set; }
 
         public static String GetMacAddress()

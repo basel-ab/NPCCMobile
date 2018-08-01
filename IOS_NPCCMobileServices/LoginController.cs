@@ -4,6 +4,7 @@ using SVProgressHUDBinding;
 using System;
 using UIKit;
 using Xamarin.Essentials;
+using static ModelLibrary.clsEnum;
 
 namespace IOS_NPCCMobileServices
 {

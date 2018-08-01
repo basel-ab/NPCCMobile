@@ -29,16 +29,13 @@ namespace Android_NPCCMobileServices
             InflaterMain = inflater;
 			View view = inflater.Inflate(Resource.Layout.Fragment1, container, false);
             stationName = view.FindViewById<TextView>(Resource.Id.txtFragment1);
-            getWeatherAsync(24, 54);
+            getWeather(24, 54);
 			return view;
 		}
 
-        public async void getWeatherAsync(double l, double t)
+        public void getWeather(double l, double t)
         {
-            Model mMd = new Model();
-            WeatherResult wr = await mMd.GetWeatherReportAsync(l, t);
-
-            stationName.Text = $"Location: {wr.weatherObservation.stationName} \nTemperature: {wr.weatherObservation.temperature}";
+            stationName.Text = $"Location:  \nTemperature: ";
         }
         public override void OnResume()
         {

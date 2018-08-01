@@ -9,4 +9,7 @@
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="Xamarin.Essentials" Version="0.9.1-preview" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="WeatherResult.cs" />
+  </ItemGroup>
 </Project>
