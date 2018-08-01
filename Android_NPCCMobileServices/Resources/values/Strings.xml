@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android_NPCCMobileServices</string>
+    <string name="ActionBarTitle"></string>
+    <string name="openDrawer">Drawer Open</string>
+    <string name="closeDrawer">Drawer Closed</string>
+    <string name="Frag1Title">Frag 1 Title</string>
+    <string name="Frag2Title">Frag 2 Title</string>
+    <string name="Frag3Title">Frag 3 Title</string>
+    <string name="Frag5Title">Frag 5 Title</string>
+</resources>
