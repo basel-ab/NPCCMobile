@@ -247,7 +247,7 @@
         <!--Navigation Controller-->
         <scene sceneID="YTp-EK-PW6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GHu-Nv-uwk" sceneMemberID="viewController" storyboardIdentifier="InitialTab">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GHu-Nv-uwk" sceneMemberID="viewController" storyboardIdentifier="InitialController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bhl-6w-FsA">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

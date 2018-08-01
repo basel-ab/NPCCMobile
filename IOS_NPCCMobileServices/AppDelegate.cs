@@ -73,7 +73,7 @@ namespace IOS_NPCCMobileServices
         void LoginController_OnLoginSuccess(object sender, EventArgs e)
         {
             //We have successfully Logged In
-            var tabBarController = GetViewController(MainStoryboard, "InitialTab");
+            var tabBarController = GetViewController(MainStoryboard, "InitialController");
             SetRootViewController(tabBarController, true);
         }
     }
