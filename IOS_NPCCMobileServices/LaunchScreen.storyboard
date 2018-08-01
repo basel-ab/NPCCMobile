@@ -39,4 +39,7 @@
             <point key="canvasLocation" x="52" y="374.6627"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="SplashScreenBackground" width="640" height="1136"/>
+    </resources>
 </document>
