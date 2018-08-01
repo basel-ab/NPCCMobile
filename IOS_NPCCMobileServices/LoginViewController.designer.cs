@@ -11,8 +11,8 @@ using UIKit;
 
 namespace IOS_NPCCMobileServices
 {
-    [Register ("LoginController")]
-    partial class LoginController
+    [Register ("LoginViewController")]
+    partial class LoginViewController
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -25,10 +25,6 @@ namespace IOS_NPCCMobileServices
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtUsername { get; set; }
-
-        [Action ("didTapLoginButton:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void didTapLoginButton (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {

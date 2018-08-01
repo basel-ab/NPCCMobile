@@ -3,6 +3,7 @@ using Foundation;
 using System;
 using System.Collections.Generic;
 using UIKit;
+using Xamarin.Essentials;
 using ZXing;
 using ZXing.Mobile;
 
@@ -13,6 +14,7 @@ namespace IOS_NPCCMobileServices
 
         MobileBarcodeScanner scanner;
         CustomOverlayView customOverlay;
+
         public HomeController (IntPtr handle) : base (handle)
         {
             
@@ -28,6 +30,8 @@ namespace IOS_NPCCMobileServices
             btnAVScan.TouchUpInside += BtnAVScan_TouchUpInsideAsync;
             btnContScan.TouchUpInside += BtnContScan_TouchUpInside;
             btnCustomView.TouchUpInside += BtnCustomView_TouchUpInsideAsync;
+
+            btnLogout.TouchUpInside += BtnLogout_TouchUpInside;
         }
 
         async void btnNormalScan_TouchUpInsideAsync(object sender, EventArgs e)
@@ -151,6 +155,24 @@ namespace IOS_NPCCMobileServices
                     PresentViewController(av, true, null);
                 });
             });
+        }
+
+        void BtnLogout_TouchUpInside(object sender, EventArgs e)
+        {
+            SecureStorage.Remove("oauth_token");
+
+            //Create an instance of our AppDelegate
+            var appDelegate = UIApplication.SharedApplication.Delegate as AppDelegate;
+
+            //Get an instance of our MainStoryboard.storyboard
+            var mainStoryboard = appDelegate.MainStoryboard;
+
+            //Get an instance of our MainTabBarViewController
+            var loginController = appDelegate.GetViewController(mainStoryboard, "LoginViewController") as LoginViewController;
+
+            //Set the MainTabBarViewController as our RootViewController
+            loginController.OnLoginSuccess += appDelegate.LoginController_OnLoginSuccess;
+            appDelegate.SetRootViewController(loginController, true);
         }
 
     }

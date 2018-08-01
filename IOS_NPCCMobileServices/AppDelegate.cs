@@ -62,20 +62,22 @@ namespace IOS_NPCCMobileServices
             else
             {
                 //User needs to log in, so show the Login View Controlller
-                var loginViewController = GetViewController(MainStoryboard, "LoginController") as LoginController;
-                loginViewController.OnLoginSuccess += LoginController_OnLoginSuccess;
-                SetRootViewController(loginViewController, false);
+                var loginController = GetViewController(MainStoryboard, "LoginViewController") as LoginViewController;
+                loginController.OnLoginSuccess += LoginController_OnLoginSuccess;
+                SetRootViewController(loginController, false);
             }
 
             return true;
         }
 
-        void LoginController_OnLoginSuccess(object sender, EventArgs e)
+        public void LoginController_OnLoginSuccess(object sender, EventArgs e)
         {
             //We have successfully Logged In
             var tabBarController = GetViewController(MainStoryboard, "InitialController");
             SetRootViewController(tabBarController, true);
         }
+
+
     }
 }
 

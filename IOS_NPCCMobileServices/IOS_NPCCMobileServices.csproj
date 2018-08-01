@@ -123,6 +123,8 @@
     <ImageAsset Include="Assets.xcassets\SplashScreenBackground.imageset\npcc-splash-screen 2.jpg" />
     <ImageAsset Include="Assets.xcassets\SplashScreenBackground.imageset\npcc-splash-screen 3.jpg" />
     <ImageAsset Include="Assets.xcassets\LoginBackground.imageset\npcc-Login-Background.jpg" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon 2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -151,9 +153,9 @@
       <DependentUpon>GenerateBarcodeController.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomOverlayView.cs" />
-    <Compile Include="LoginController.cs" />
-    <Compile Include="LoginController.designer.cs">
-      <DependentUpon>LoginController.cs</DependentUpon>
+    <Compile Include="LoginViewController.cs" />
+    <Compile Include="LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

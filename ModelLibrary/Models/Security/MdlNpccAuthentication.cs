@@ -76,6 +76,7 @@ namespace ModelLibrary
         public async Task<bool> IsAuthenticatedCheckAsync()
         {
             var oauthToken = await SecureStorage.GetAsync("oauth_token");
+
             return false;
         }
     }

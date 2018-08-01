@@ -109,7 +109,7 @@
                         <outlet property="btnAVScan" destination="5594" id="name-outlet-5594"/>
                         <outlet property="btnContScan" destination="8280" id="name-outlet-8280"/>
                         <outlet property="btnCustomView" destination="9670" id="name-outlet-9670"/>
-                        <outlet property="btnLogin" destination="10196" id="name-outlet-10196"/>
+                        <outlet property="btnLogout" destination="10196" id="name-outlet-10196"/>
                         <outlet property="btnNormalScan" destination="5587" id="name-outlet-5587"/>
                     </connections>
                 </viewController>
@@ -174,7 +174,7 @@
         <!--Login Controller-->
         <scene sceneID="12395">
             <objects>
-                <viewController storyboardIdentifier="LoginController" id="12396" customClass="LoginController" customModule="IOS_NPCCMobileServices" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="12396" customModuleProvider="target" sceneMemberID="viewController" customClass="LoginViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="12449"/>
                         <viewControllerLayoutGuide type="bottom" id="12455"/>
@@ -187,7 +187,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12403" userLabel="LoginFormContainerView">
-                                <rect key="frame" x="36" y="128.5" width="304" height="133.5"/>
+                                <rect key="frame" x="36" y="92" width="304" height="133.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="12400" userLabel="Username Text Field">
                                         <rect key="frame" x="20" y="20.5" width="264" height="30"/>
@@ -220,9 +220,7 @@
                                                 <real key="value" value="13"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="didTapLoginButton:" destination="12396" eventType="touchUpInside" id="12406"/>
-                                        </connections>
+                                        <connections/>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="12398" userLabel="Password Text Field">
                                         <rect key="frame" x="20" y="57" width="264" height="30"/>
@@ -254,13 +252,13 @@
                                     <constraint firstItem="12405" firstAttribute="width" secondItem="12398" secondAttribute="width" id="12418"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NPCC Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12437">
-                                <rect key="frame" x="0.0" y="80" width="375" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12437">
+                                <rect key="frame" x="0.0" y="40" width="375" height="42"/>
                                 <color key="tintColor" red="0.12156862745098039" green="0.29411764705882354" blue="0.64313725490196072" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="12438"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="31"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="47"/>
                                 <color key="textColor" red="0.14117647058823529" green="0.36470588235294116" blue="0.68627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -271,11 +269,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="12403" secondAttribute="trailing" constant="19" id="12443"/>
                             <constraint firstItem="12402" firstAttribute="height" secondItem="12401" secondAttribute="height" id="12444"/>
                             <constraint firstItem="12402" firstAttribute="width" secondItem="12401" secondAttribute="width" id="12446"/>
-                            <constraint firstItem="12437" firstAttribute="top" secondItem="12449" secondAttribute="bottom" multiplier="4" id="12448"/>
+                            <constraint firstItem="12437" firstAttribute="top" secondItem="12449" secondAttribute="bottom" id="12448" constant="20"/>
                             <constraint firstItem="12437" firstAttribute="width" secondItem="12401" secondAttribute="width" id="12450"/>
                             <constraint firstItem="12402" firstAttribute="centerY" secondItem="12401" secondAttribute="centerY" id="12451"/>
                             <constraint firstItem="12402" firstAttribute="centerX" secondItem="12401" secondAttribute="centerX" id="12452"/>
-                            <constraint firstItem="12403" firstAttribute="top" secondItem="12437" secondAttribute="bottom" multiplier="1.05" constant="0.25000689999999998" id="12453"/>
+                            <constraint firstItem="12403" firstAttribute="top" secondItem="12437" secondAttribute="bottom" id="12453" constant="10"/>
                             <constraint firstItem="12437" firstAttribute="centerX" secondItem="12401" secondAttribute="centerX" id="12454"/>
                         </constraints>
                     </view>

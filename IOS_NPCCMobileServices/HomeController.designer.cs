@@ -28,7 +28,7 @@ namespace IOS_NPCCMobileServices
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton btnLogin { get; set; }
+        UIKit.UIButton btnLogout { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -55,9 +55,9 @@ namespace IOS_NPCCMobileServices
                 btnCustomView = null;
             }
 
-            if (btnLogin != null) {
-                btnLogin.Dispose ();
-                btnLogin = null;
+            if (btnLogout != null) {
+                btnLogout.Dispose ();
+                btnLogout = null;
             }
 
             if (btnNormalScan != null) {
