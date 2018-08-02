@@ -131,10 +131,16 @@
     <Folder Include="Assets.xcassets\logo.imageset\" />
     <Folder Include="Assets.xcassets\LoginBackground.imageset\" />
     <Folder Include="Assets.xcassets\SplashScreenBackground.imageset\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Controllers\CommonControllers\" />
+    <Folder Include="Storyboard\" />
+    <Folder Include="Storyboard\CommonStoryboard\" />
+    <Folder Include="Controllers\UtilityControllers\" />
+    <Folder Include="ViewClasses\" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="LaunchScreen.storyboard" />
-    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Storyboard\CommonStoryboard\LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Storyboard\CommonStoryboard\Main.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -144,19 +150,19 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="HomeController.cs" />
-    <Compile Include="HomeController.designer.cs">
+    <Compile Include="Controllers\CommonControllers\HomeController.cs" />
+    <Compile Include="Controllers\CommonControllers\HomeController.designer.cs">
       <DependentUpon>HomeController.cs</DependentUpon>
     </Compile>
-    <Compile Include="GenerateBarcodeController.cs" />
-    <Compile Include="GenerateBarcodeController.designer.cs">
-      <DependentUpon>GenerateBarcodeController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomOverlayView.cs" />
-    <Compile Include="LoginViewController.cs" />
-    <Compile Include="LoginViewController.designer.cs">
+    <Compile Include="Controllers\CommonControllers\LoginViewController.cs" />
+    <Compile Include="Controllers\CommonControllers\LoginViewController.designer.cs">
       <DependentUpon>LoginViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\UtilityControllers\GenerateBarcodeController.cs" />
+    <Compile Include="Controllers\UtilityControllers\GenerateBarcodeController.designer.cs">
+      <DependentUpon>GenerateBarcodeController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewClasses\CustomOverlayView.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ModelLibrary\ModelLibrary.csproj">

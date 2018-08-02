@@ -51,10 +51,10 @@ namespace IOS_NPCCMobileServices
                 await SecureStorage.SetAsync("oauth_token", lg.Token);
                 //We have successfully authenticated a the user,
                 //Now fire our OnLoginSuccess Event.
-                //if (OnLoginSuccess != null)
-                //{
+                if (OnLoginSuccess != null)
+                {
                     OnLoginSuccess(sender, new EventArgs());
-                //}
+                }
 
                     //if (lg.Authenticated == LoginResault.SuccessfullyAuthenticated)
                     //{
