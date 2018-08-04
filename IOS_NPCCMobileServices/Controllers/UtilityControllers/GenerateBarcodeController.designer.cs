@@ -16,10 +16,19 @@ namespace IOS_NPCCMobileServices
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton btnBack { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView imageBarcode { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (btnBack != null) {
+                btnBack.Dispose ();
+                btnBack = null;
+            }
+
             if (imageBarcode != null) {
                 imageBarcode.Dispose ();
                 imageBarcode = null;

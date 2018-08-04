@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleName</key>
-	<string>NPCCMobileServices</string>
+	<string>NPCC</string>
 	<key>CFBundleIdentifier</key>
 	<string>NPCC.testapp</string>
 	<key>CFBundleShortVersionString</key>

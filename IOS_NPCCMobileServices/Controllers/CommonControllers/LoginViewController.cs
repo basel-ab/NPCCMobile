@@ -47,31 +47,24 @@ namespace IOS_NPCCMobileServices
 
                     SVProgressHUD.Dismiss();
                     SVProgressHUD.SetDefaultMaskType(SVProgressHUDMaskType.None);
-
-                await SecureStorage.SetAsync("oauth_token", lg.Token);
                 //We have successfully authenticated a the user,
                 //Now fire our OnLoginSuccess Event.
-                if (OnLoginSuccess != null)
-                {
-                    OnLoginSuccess(sender, new EventArgs());
-                }
+                    if (lg.Authenticated == LoginResault.SuccessfullyAuthenticated)
+                    {
+                        await SecureStorage.SetAsync("oauth_token", lg.Token);
+                        //We have successfully authenticated a the user,
+                        //Now fire our OnLoginSuccess Event.
+                        if (OnLoginSuccess != null)
+                        {
+                            OnLoginSuccess(sender, new EventArgs());
+                        }
+                    }
+                    else
+                    {
+                        SVProgressHUD.ShowErrorWithStatus("Wrong Password");
+                        SVProgressHUD.DismissWithDelay(10);
 
-                    //if (lg.Authenticated == LoginResault.SuccessfullyAuthenticated)
-                    //{
-                    //    await SecureStorage.SetAsync("oauth_token", lg.Token);
-                    //    //We have successfully authenticated a the user,
-                    //    //Now fire our OnLoginSuccess Event.
-                    //    if (OnLoginSuccess != null)
-                    //    {
-                    //        OnLoginSuccess(sender, new EventArgs());
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //    SVProgressHUD.ShowErrorWithStatus("Wrong Password");
-                    //    SVProgressHUD.DismissWithDelay(10);
-
-                    //}
+                    }
                 }
                 else
                 {

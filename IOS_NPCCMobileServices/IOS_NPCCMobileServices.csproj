@@ -27,6 +27,7 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>pdbonly</DebugType>
@@ -41,6 +42,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
     <PlatformTarget>x86</PlatformTarget>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>pdbonly</DebugType>
@@ -101,19 +103,6 @@
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\Contents.json" />
     <ImageAsset Include="Assets.xcassets\logo.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\logo.imageset\logo.png" />
-    <ImageAsset Include="Assets.xcassets\night-stars-wallpaper.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\night-stars-wallpaper.imageset\night-stars-wallpaper-1.png" />
-    <ImageAsset Include="Assets.xcassets\night-stars-wallpaper.imageset\night-stars-wallpaper-2.png" />
-    <ImageAsset Include="Assets.xcassets\night-stars-wallpaper.imageset\night-stars-wallpaper.png" />
-    <ImageAsset Include="Assets.xcassets\facebook-icon.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\facebook-icon.imageset\facebook-icon-1.png" />
-    <ImageAsset Include="Assets.xcassets\facebook-icon.imageset\facebook-icon-2.png" />
-    <ImageAsset Include="Assets.xcassets\facebook-icon.imageset\facebook-icon.png" />
-    <ImageAsset Include="Assets.xcassets\twitter-icon.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\twitter-icon.imageset\twitter-icon-1.png" />
-    <ImageAsset Include="Assets.xcassets\twitter-icon.imageset\twitter-icon-2.png" />
-    <ImageAsset Include="Assets.xcassets\twitter-icon.imageset\twitter-icon.png" />
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\LoginBackground.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SplashScreenBackground.imageset\Contents.json" />
@@ -123,8 +112,17 @@
     <ImageAsset Include="Assets.xcassets\SplashScreenBackground.imageset\npcc-splash-screen 2.jpg" />
     <ImageAsset Include="Assets.xcassets\SplashScreenBackground.imageset\npcc-splash-screen 3.jpg" />
     <ImageAsset Include="Assets.xcassets\LoginBackground.imageset\npcc-Login-Background.jpg" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon 2.png" />
-    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon40x40.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon60x60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon58x58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon87x87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon80x80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon120x120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon120x120_1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon180x180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon20x20.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon29x29.png" />
+    <ImageAsset Include="Assets.xcassets\logo.imageset\logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />

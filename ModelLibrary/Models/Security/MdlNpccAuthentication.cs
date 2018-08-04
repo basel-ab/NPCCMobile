@@ -41,7 +41,7 @@ namespace ModelLibrary
                 return null;
 
             HttpClient client = new HttpClient();
-            string url = $"http://webapps.npcc.ae/Masharee/NPCCMobileWebServices/LoginValidator";
+            string url = $"http://webapps.npcc.ae/ApplicationWebServices/Authentication/LoginValidator/?username={username}&password={password}";
             client.BaseAddress = new Uri(url);
 
             clsCredentials objCredentials = new clsCredentials();
@@ -52,9 +52,9 @@ namespace ModelLibrary
 
             try
             {
-                var content = new StringContent(json, Encoding.UTF32, "application/json");
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                var response = await client.PostAsync(client.BaseAddress, content);
+                var response = await client.GetAsync(client.BaseAddress);
                 response.EnsureSuccessStatusCode();
                 var jsonResult = response.Content.ReadAsStringAsync().Result;
                 var Login_Info = JsonConvert.DeserializeObject<clsLoginInfo>(jsonResult);
@@ -77,6 +77,9 @@ namespace ModelLibrary
         {
             var oauthToken = await SecureStorage.GetAsync("oauth_token");
 
+            if(oauthToken != null)
+            return true;
+            else
             return false;
         }
     }

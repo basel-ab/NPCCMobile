@@ -31,6 +31,14 @@ namespace IOS_NPCCMobileServices
             var barcode = barcodeWriter.Write("Basel AbuBaker");
 
             imageBarcode.Image = barcode;
+
+            btnBack.TouchUpInside += BtnBack_TouchUpInside;
         }
+
+        void BtnBack_TouchUpInside(object sender, EventArgs e)
+        {
+            DismissViewController(true, null);
+        }
+
     }
 }
