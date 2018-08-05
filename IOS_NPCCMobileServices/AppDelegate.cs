@@ -3,6 +3,8 @@
 using Foundation;
 using UIKit;
 using ModelLibrary;
+using Xamarin.Essentials;
+using System.Threading.Tasks;
 
 namespace IOS_NPCCMobileServices
 {
@@ -48,16 +50,33 @@ namespace IOS_NPCCMobileServices
         }
 
         //Override FinishedLaunching. This executes after the app has started.
-        public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+        public override  bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            oauth = new MdlNpccAuthentication();
             //isAuthenticated can be used for an auto-login feature, you'll have to implement this
             //as you see fit or get rid of the if statement if you want.
-            if (oauth.IsAuthenticatedCheckAsync().Result)
+            try
+            {
+                setMainControllerAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+                return false;
+            }
+
+        }
+
+        public async void setMainControllerAsync(){
+            
+            oauth = new MdlNpccAuthentication();
+
+            bool isAuth = await oauth.IsAuthenticatedAsync();
+            if (isAuth)
             {
                 //We are already authenticated, so go to the main tab bar controller;
                 var tabBarController = GetViewController(MainStoryboard, "InitialController");
-                SetRootViewController(tabBarController,false);
+                SetRootViewController(tabBarController, false);
             }
             else
             {
@@ -67,7 +86,6 @@ namespace IOS_NPCCMobileServices
                 SetRootViewController(loginController, false);
             }
 
-            return true;
         }
 
         public void LoginController_OnLoginSuccess(object sender, EventArgs e)

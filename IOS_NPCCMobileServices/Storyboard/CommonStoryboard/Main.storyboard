@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="12396">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="13836">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -291,10 +291,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12456" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="700.3823"/>
+            <point key="canvasLocation" x="1075" y="683.3823"/>
+        </scene>
+        <scene sceneID="13835">
+            <objects>
+                <viewController id="13836" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="13843"/>
+                        <viewControllerLayoutGuide type="bottom" id="13844"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="13837">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="13838" adjustsImageSizeForAccessibilityContentSizeCategory="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="13838" firstAttribute="centerY" secondItem="13837" secondAttribute="centerY" id="13839"/>
+                            <constraint firstItem="13838" firstAttribute="width" secondItem="13837" secondAttribute="width" id="13840"/>
+                            <constraint firstItem="13838" firstAttribute="height" secondItem="13837" secondAttribute="height" id="13841"/>
+                            <constraint firstItem="13838" firstAttribute="centerX" secondItem="13837" secondAttribute="centerX" id="13842"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13845" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585" y="687.6627"/>
         </scene>
     </scenes>
     <resources>
         <image name="LoginBackground" width="640" height="1136"/>
+        <image name="SplashScreenBackground" width="640" height="1136"/>
     </resources>
 </document>
