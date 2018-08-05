@@ -81,17 +81,12 @@ namespace ModelLibrary
             string url = "https://webapps.npcc.ae/ApplicationWebServices/api/Authentication/IsAuthenticated";
             client.BaseAddress = new Uri(url);
 
-            //JObject oJsonObject = new JObject();
-            //oJsonObject.Add("Token",  oauthToken); 
-
-            clsToken oToken = new clsToken();
-            oToken.Token = oauthToken;
-
-            string json = JsonConvert.SerializeObject(oToken);
+            JObject oJsonObject = new JObject();
+            oJsonObject.Add("Token",  oauthToken);
 
             try
             {
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                var content = new StringContent(oJsonObject.ToString(), Encoding.UTF8, "application/json");
 
                 var response = await client.PostAsync(client.BaseAddress, content);
                 response.EnsureSuccessStatusCode();
