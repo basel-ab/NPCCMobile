@@ -68,7 +68,6 @@ namespace IOS_NPCCMobileServices
         }
 
         public async void setMainControllerAsync(){
-            
             oauth = new MdlNpccAuthentication();
 
             bool isAuth = await oauth.IsAuthenticatedAsync();
@@ -85,7 +84,6 @@ namespace IOS_NPCCMobileServices
                 loginController.OnLoginSuccess += LoginController_OnLoginSuccess;
                 SetRootViewController(loginController, false);
             }
-
         }
 
         public void LoginController_OnLoginSuccess(object sender, EventArgs e)
