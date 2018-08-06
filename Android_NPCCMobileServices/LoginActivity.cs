@@ -59,7 +59,7 @@ namespace Android_NPCCMobileServices
                 }
                 else
                 {
-                    Toast.MakeText(this, "Wrong Username/ Password!", ToastLength.Short).Show();
+                    Toast.MakeText(this, lg.Authenticated.ToString(), ToastLength.Short).Show();
                 }
             }
             else
