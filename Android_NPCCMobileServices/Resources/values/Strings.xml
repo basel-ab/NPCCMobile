@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Android_NPCCMobileServices</string>
+    <string name="app_name">NPCC</string>
+    <string name="app_icon">@drawable/icon</string>
     <string name="ActionBarTitle"></string>
     <string name="openDrawer">Drawer Open</string>
     <string name="closeDrawer">Drawer Closed</string>

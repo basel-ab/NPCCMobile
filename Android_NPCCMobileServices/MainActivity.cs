@@ -7,10 +7,11 @@ using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.V4.Widget;
 using System.Collections.Generic;
 using SupportFragment = Android.Support.V4.App.Fragment;
+using Xamarin.Essentials;
 
 namespace Android_NPCCMobileServices
 {
-    [Activity ( MainLauncher = true)]
+    [Activity ()]
     public class MainActivity : Android.Support.V7.App.AppCompatActivity
 	{
         private SupportToolbar mToolbar;
@@ -25,7 +26,7 @@ namespace Android_NPCCMobileServices
         private Fragment3 mFragment3;
 		private Stack<SupportFragment> mStackFragments;
 
-        protected override void OnCreate (Bundle savedInstanceState)
+        protected override void OnCreate(Bundle savedInstanceState)
 		{
             base.OnCreate (savedInstanceState);
 	
@@ -140,27 +141,33 @@ namespace Android_NPCCMobileServices
 
 				return true;
 
-			case Resource.Id.action_fragment1:				
+			    case Resource.Id.action_fragment1:				
                     ShowFragment(mFragment1);
                     SupportActionBar.Title = " - " + Resources.GetString(Resource.String.Frag1Title);
                     return true;
 
-			case Resource.Id.action_fragment2:
+			    case Resource.Id.action_fragment2:
                     ShowFragment(mFragment2);
                     SupportActionBar.Title = " - " + Resources.GetString(Resource.String.Frag2Title);
                     return true;
 
-			case Resource.Id.action_fragment3:
+			    case Resource.Id.action_fragment3:
                     ShowFragment(mFragment3);
                     SupportActionBar.Title = " - " + Resources.GetString(Resource.String.Frag3Title);
                     return true;
-            case Resource.Id.action_fragment5:
+                case Resource.Id.action_fragment5:
                     StartActivity(typeof(Fragment5));
                     SupportActionBar.Title = " - " + Resources.GetString(Resource.String.Frag5Title);
                     return true;
 
-			default:
-				return base.OnOptionsItemSelected (item);
+                case Resource.Id.action_Logout:
+                    SecureStorage.Remove("oauth_token");
+                    StartActivity(typeof(LoginActivity));
+                    Finish();
+                    return true;
+
+			    default:
+				    return base.OnOptionsItemSelected (item);
 			}
 		}
 			

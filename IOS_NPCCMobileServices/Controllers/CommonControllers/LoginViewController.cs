@@ -61,14 +61,14 @@ namespace IOS_NPCCMobileServices
                     }
                     else
                     {
-                        SVProgressHUD.ShowErrorWithStatus("Wrong Password");
-                        SVProgressHUD.DismissWithDelay(10);
+                    SVProgressHUD.ShowErrorWithStatus("Wrong Username/ Password!");
+                    SVProgressHUD.DismissWithDelay(10);
 
                     }
                 }
                 else
                 {
-                    SVProgressHUD.ShowErrorWithStatus("Empty Username/Password");
+                    SVProgressHUD.ShowErrorWithStatus("Empty Username/ Password!");
                     SVProgressHUD.DismissWithDelay(10);
                 }
 

@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
   <item>
     <bitmap
-        android:src="@drawable/npccSplashScreen"
+        android:src="@drawable/npccLoginBackground"
         android:tileMode="disabled"
         android:gravity="fill_horizontal|fill_vertical"/>
   </item>
