@@ -16,7 +16,7 @@ namespace IOS_NPCCMobileServices
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton btnLogin { get; set; }
+        IOS_NPCCMobileServices.clsBlueButton btnLogin { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]

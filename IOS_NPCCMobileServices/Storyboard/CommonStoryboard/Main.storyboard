@@ -210,7 +210,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12405">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12405" customClass="clsBlueButton">
                                         <rect key="frame" x="20" y="101" width="264" height="30"/>
                                         <color key="backgroundColor" red="0.2196078431372549" green="0.49411764705882355" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -295,7 +295,7 @@
         </scene>
         <scene sceneID="13835">
             <objects>
-                <viewController id="13836" sceneMemberID="viewController">
+                <viewController id="13836" sceneMemberID="viewController" customClass="SplashScreenController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="13843"/>
                         <viewControllerLayoutGuide type="bottom" id="13844"/>
