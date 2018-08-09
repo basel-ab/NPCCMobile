@@ -17,12 +17,12 @@ namespace Android_NPCCMobileServices
     [Activity(MainLauncher = true, Theme = "@style/SplashTheme")]
     public class InitialActivity : Activity
     {
-        public MdlNpccAuthentication oauth;
+        public npcc_authentication oauth;
         protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
-            oauth = new MdlNpccAuthentication();
+            oauth = new npcc_authentication();
             bool isAuth = await oauth.IsAuthenticatedAsync();
 
             if (isAuth)

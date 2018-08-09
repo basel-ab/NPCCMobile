@@ -11,7 +11,7 @@ namespace IOS_NPCCMobileServices
     [Register("AppDelegate")]
     public class AppDelegate : UIApplicationDelegate
     {
-        public MdlNpccAuthentication oauth;
+        public npcc_authentication oauth;
 
         public override UIWindow Window
         {
@@ -68,7 +68,7 @@ namespace IOS_NPCCMobileServices
         }
 
         public async void setMainControllerAsync(){
-            oauth = new MdlNpccAuthentication();
+            oauth = new npcc_authentication();
 
             bool isAuth = await oauth.IsAuthenticatedAsync();
             if (isAuth)

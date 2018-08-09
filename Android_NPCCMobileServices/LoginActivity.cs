@@ -13,7 +13,7 @@ using Android.Widget;
 using Dmax.Dialog;
 using ModelLibrary;
 using Xamarin.Essentials;
-using static ModelLibrary.clsEnum;
+using static ModelLibrary.npcc_types;
 
 namespace Android_NPCCMobileServices
 {
@@ -42,14 +42,14 @@ namespace Android_NPCCMobileServices
                 dialog.SetCancelable(false);
                 dialog.Show();
 
-                MdlNpccAuthentication oauth = new MdlNpccAuthentication();
-                clsLoginInfo lg = await oauth.Login(txtUsername.Text, txtPassword.Text);
+                npcc_authentication oauth = new npcc_authentication();
+                inf_login_info lg = await oauth.Login(txtUsername.Text, txtPassword.Text);
 
                 dialog.Dismiss();
 
                 //We have successfully authenticated a the user,
                 //Now fire our OnLoginSuccess Event.
-                if (lg.Authenticated == LoginResault.SuccessfullyAuthenticated)
+                if (lg.Authenticated == inf_login_result.SuccessfullyAuthenticated)
                 {
                     await SecureStorage.SetAsync("oauth_token", lg.Token);
                     //We have successfully authenticated a the user,
@@ -59,12 +59,12 @@ namespace Android_NPCCMobileServices
                 }
                 else
                 {
-                    Toast.MakeText(this, lg.Authenticated.ToString(), ToastLength.Short).Show();
+                    Toast.MakeText(this, lg.Authenticated.ToString(), ToastLength.Long).Show();
                 }
             }
             else
             {
-                Toast.MakeText(this, "Empty Username/ Password!", ToastLength.Short).Show();
+                Toast.MakeText(this, "Empty Username/ Password!", ToastLength.Long).Show();
             }
         }
 

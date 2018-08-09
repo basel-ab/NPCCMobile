@@ -1,9 +1,9 @@
 ﻿using System;
 namespace ModelLibrary
 {
-    public static class clsEnum
+    public static class npcc_types
     {
-        public enum LoginResault
+        public enum inf_login_result
         {
             SuccessfullyAuthenticated = 0,
             WorngUsernameOrPassword = 1,
@@ -12,12 +12,18 @@ namespace ModelLibrary
             ErrorOccurred = 9
         }
 
-        public enum RequestType
+        public enum inf_request
         {
             Projects = 1
         }
 
-        public enum ErrorType
+        public enum inf_method
+        {
+            Get = 1,
+            Post =2 
+        }
+
+        public enum inf_error
         {
             ErrorOccurred = 0,
             InvalidToken = 1,

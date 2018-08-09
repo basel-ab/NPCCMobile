@@ -4,7 +4,7 @@ using SVProgressHUDBinding;
 using System;
 using UIKit;
 using Xamarin.Essentials;
-using static ModelLibrary.clsEnum;
+using static ModelLibrary.npcc_types;
 
 namespace IOS_NPCCMobileServices
 {
@@ -42,14 +42,14 @@ namespace IOS_NPCCMobileServices
                     SVProgressHUD.SetDefaultMaskType(SVProgressHUDMaskType.Black);
                     SVProgressHUD.ShowWithStatus("Checking Your Details...");
 
-                    MdlNpccAuthentication oauth = new MdlNpccAuthentication();
-                    clsLoginInfo lg = await oauth.Login(txtUsername.Text, txtPassword.Text);
+                    npcc_authentication oauth = new npcc_authentication();
+                    inf_login_info lg = await oauth.Login(txtUsername.Text, txtPassword.Text);
 
                     SVProgressHUD.Dismiss();
                     SVProgressHUD.SetDefaultMaskType(SVProgressHUDMaskType.None);
                 //We have successfully authenticated a the user,
                 //Now fire our OnLoginSuccess Event.
-                    if (lg.Authenticated == LoginResault.SuccessfullyAuthenticated)
+                    if (lg.Authenticated == inf_login_result.SuccessfullyAuthenticated)
                     {
                         await SecureStorage.SetAsync("oauth_token", lg.Token);
                         //We have successfully authenticated a the user,
