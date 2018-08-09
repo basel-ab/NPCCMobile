@@ -55,6 +55,7 @@ namespace Android_NPCCMobileServices
                     //We have successfully authenticated a the user,
                     //Now fire our OnLoginSuccess Event.
                     StartActivity(typeof(MainActivity));
+                    npcc_services.inf_mobile_exception_managerAsync("testing");
                     Finish();
                 }
                 else

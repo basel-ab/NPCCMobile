@@ -13,28 +13,36 @@ namespace IOS_NPCCMobileServices
         //Create an event when a authentication is successful
         public event EventHandler OnLoginSuccess;
 
-        public LoginViewController (IntPtr handle) : base (handle)
-        {
-        }
+        public LoginViewController (IntPtr handle) : base (handle){}
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            NavigationItem.Title = "Login to NPCC";
 
-            txtPassword.AttributedPlaceholder = new NSAttributedString("Enter Your Password", null, UIColor.White);
-            txtUsername.AttributedPlaceholder = new NSAttributedString("Enter Your Username", null, UIColor.White);
+            try
+            {
+                NavigationItem.Title = "Login to NPCC";
 
-            
+                txtPassword.AttributedPlaceholder = new NSAttributedString("Enter Your Password", null, UIColor.White);
+                txtUsername.AttributedPlaceholder = new NSAttributedString("Enter Your Username", null, UIColor.White);
 
-            btnLogin.TouchUpInside += BtnLogin_TouchUpInsideAsync;
-            View.EndEditing(true);
 
-            txtPassword.ShouldReturn += TxtPassword_ShouldReturn;
+
+                btnLogin.TouchUpInside += BtnLogin_TouchUpInsideAsync;
+                View.EndEditing(true);
+
+                txtPassword.ShouldReturn += TxtPassword_ShouldReturn;
+            }
+            catch (Exception ex)
+            {
+                npcc_services.inf_mobile_exception_managerAsync(ex.Message);
+            }
         }
 
         async void BtnLogin_TouchUpInsideAsync(object sender, EventArgs e)
         {
+            try
+            {
                 txtPassword.ResignFirstResponder();
                 //Validate our Username & Password.
                 if (IsUserNameValid() && IsPasswordValid())
@@ -47,8 +55,8 @@ namespace IOS_NPCCMobileServices
 
                     SVProgressHUD.Dismiss();
                     SVProgressHUD.SetDefaultMaskType(SVProgressHUDMaskType.None);
-                //We have successfully authenticated a the user,
-                //Now fire our OnLoginSuccess Event.
+                    //We have successfully authenticated a the user,
+                    //Now fire our OnLoginSuccess Event.
                     if (lg.Authenticated == inf_login_result.SuccessfullyAuthenticated)
                     {
                         await SecureStorage.SetAsync("oauth_token", lg.Token);
@@ -61,8 +69,8 @@ namespace IOS_NPCCMobileServices
                     }
                     else
                     {
-                    SVProgressHUD.ShowErrorWithStatus(lg.Authenticated.ToString());
-                    SVProgressHUD.DismissWithDelay(10);
+                        SVProgressHUD.ShowErrorWithStatus(lg.Authenticated.ToString());
+                        SVProgressHUD.DismissWithDelay(10);
 
                     }
                 }
@@ -71,7 +79,11 @@ namespace IOS_NPCCMobileServices
                     SVProgressHUD.ShowErrorWithStatus("Empty Username/ Password!");
                     SVProgressHUD.DismissWithDelay(10);
                 }
-
+            }
+            catch (Exception ex)
+            {
+                npcc_services.inf_mobile_exception_managerAsync(ex.Message);
+            }
         }
 
 

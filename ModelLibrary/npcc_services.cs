@@ -49,8 +49,17 @@ namespace ModelLibrary
             catch (HttpRequestException e)
             {
                 System.Diagnostics.Debug.WriteLine(e);
+
+                inf_mobile_exception_managerAsync(e.Message);
+
                 return default(WebServiceResault);
             }
+        }
+
+        public static async void inf_mobile_exception_managerAsync(string ex){
+            var oauthToken = await SecureStorage.GetAsync("oauth_token");
+            if(oauthToken != null)
+            await inf_CallWebServiceAsync<bool,bool>(inf_method.Get, "https://webapps.npcc.ae/ApplicationWebServices/api/Common/MobileExceptionManager?exception=" + ex);
         }
     }
 }

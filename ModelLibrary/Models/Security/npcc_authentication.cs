@@ -56,7 +56,7 @@ namespace ModelLibrary
             }
             catch (HttpRequestException e)
             {
-                System.Diagnostics.Debug.WriteLine(e);
+                npcc_services.inf_mobile_exception_managerAsync(e.Message);
                 return null;
             }
             finally
@@ -79,7 +79,7 @@ namespace ModelLibrary
             }
             catch (HttpRequestException e)
             {
-                System.Diagnostics.Debug.WriteLine(e);
+                npcc_services.inf_mobile_exception_managerAsync(e.Message);
                 SecureStorage.Remove("oauth_token");
                 return false;
             }
