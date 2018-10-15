@@ -4116,6 +4116,9 @@ namespace Android_NPCCMobileServices
 			// aapt resource value: 0x7f0e0000
 			public const int action_menu = 2131623936;
 			
+			// aapt resource value: 0x7f0e0001
+			public const int extra = 2131623937;
+			
 			static Menu()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

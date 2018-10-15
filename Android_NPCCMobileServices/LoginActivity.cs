@@ -54,7 +54,7 @@ namespace Android_NPCCMobileServices
                     await SecureStorage.SetAsync("oauth_token", lg.Token);
                     //We have successfully authenticated a the user,
                     //Now fire our OnLoginSuccess Event.
-                    StartActivity(typeof(MainActivity));
+                    StartActivity(typeof(HomeActivity));
                     npcc_services.inf_mobile_exception_managerAsync("testing");
                     Finish();
                 }

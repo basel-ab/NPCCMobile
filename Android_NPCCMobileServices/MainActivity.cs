@@ -15,7 +15,7 @@ namespace Android_NPCCMobileServices
     public class MainActivity : Android.Support.V7.App.AppCompatActivity
 	{
         private SupportToolbar mToolbar;
-		private MyActionBarDrawerToggle mDrawerToggle;
+		private DrawerToggle mDrawerToggle;
 		private DrawerLayout mDrawerLayout;
         private ExpandableListView mLeftDrawer;
 		private ListView mRightDrawer;
@@ -45,14 +45,14 @@ namespace Android_NPCCMobileServices
             mLeftDrawer.Tag = 0;
             mRightDrawer.Tag = 1;
 
-            clsLeftSideMenu objLeft = new clsLeftSideMenu(this);
+            npcc_LeftSideMenu objLeft = new npcc_LeftSideMenu(this);
             objLeft.fillLeftSideMenu(mLeftDrawer);
 
             clsRightMenu objRight = new clsRightMenu(this);
             objRight.fillRightSideMenu(mRightDrawer);
 			
 
-			mDrawerToggle = new MyActionBarDrawerToggle(
+			mDrawerToggle = new DrawerToggle(
 				this,							//Host Activity
 				mDrawerLayout,					//DrawerLayout
 				Resource.String.openDrawer,		//Opened Message
@@ -62,7 +62,7 @@ namespace Android_NPCCMobileServices
             mDrawerLayout.AddDrawerListener(mDrawerToggle);
 
 			SupportActionBar.SetHomeButtonEnabled(true);
-			SupportActionBar.SetDisplayShowTitleEnabled(true);
+			SupportActionBar.SetDisplayShowTitleEnabled(false);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetLogo(Resource.Drawable.logo);
 
@@ -108,7 +108,7 @@ namespace Android_NPCCMobileServices
             trans.Add(Resource.Id.fragmentContainer, mFragment1, "Fragment1");
             trans.Commit();
 
-            SupportActionBar.Title =" - " + Resources.GetString(Resource.String.Frag1Title);
+            //SupportActionBar.Title =" - " + Resources.GetString(Resource.String.Frag1Title);
             mCurrentFragment = mFragment1;
         }
 

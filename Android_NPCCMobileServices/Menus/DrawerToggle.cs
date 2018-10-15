@@ -5,13 +5,13 @@ using Android.Support.V4.Widget;
 
 namespace Android_NPCCMobileServices
 {
-	public class MyActionBarDrawerToggle : SupportActionBarDrawerToggle
+	public class DrawerToggle : SupportActionBarDrawerToggle
 	{
         private Android.Support.V7.App.AppCompatActivity mHostActivity;
 		private int mOpenedResource;
 		private int mClosedResource;
 
-        public MyActionBarDrawerToggle (Android.Support.V7.App.AppCompatActivity host, DrawerLayout drawerLayout, int openedResource, int closedResource) 
+        public DrawerToggle (Android.Support.V7.App.AppCompatActivity host, DrawerLayout drawerLayout, int openedResource, int closedResource) 
 			: base(host, drawerLayout, openedResource, closedResource)
 		{
 			mHostActivity = host;
@@ -20,35 +20,18 @@ namespace Android_NPCCMobileServices
 		}
 
 		public override void OnDrawerOpened (Android.Views.View drawerView)
-		{	
-			int drawerType = (int)drawerView.Tag;
-
-			if (drawerType == 0)
-			{
-				base.OnDrawerOpened (drawerView);
-				//mHostActivity.SupportActionBar.SetTitle(mOpenedResource);
-			}
-		}
+		{
+            base.OnDrawerOpened(drawerView);
+        }
 
 		public override void OnDrawerClosed (Android.Views.View drawerView)
 		{
-			int drawerType = (int)drawerView.Tag;
-
-			if (drawerType == 0)
-			{
-				base.OnDrawerClosed (drawerView);
-				//mHostActivity.SupportActionBar.SetTitle(mClosedResource);
-			}				
-		}
+            base.OnDrawerClosed(drawerView);
+        }
 
 		public override void OnDrawerSlide (Android.Views.View drawerView, float slideOffset)
 		{
-			int drawerType = (int)drawerView.Tag;
-
-			if (drawerType == 0)
-			{
-				base.OnDrawerSlide (drawerView, slideOffset);
-			}
+			base.OnDrawerSlide(drawerView, slideOffset);
 		}
 	}
 }

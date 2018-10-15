@@ -13,6 +13,7 @@ Global
 		Release|iPhone = Release|iPhone
 		Release|iPhoneSimulator = Release|iPhoneSimulator
 		Debug|iPhone = Debug|iPhone
+		DEBUG|Any CPU = DEBUG|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4E4B27E8-F76B-4150-BB0B-B5A927C9A2DD}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
@@ -23,6 +24,8 @@ Global
 		{4E4B27E8-F76B-4150-BB0B-B5A927C9A2DD}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{4E4B27E8-F76B-4150-BB0B-B5A927C9A2DD}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{4E4B27E8-F76B-4150-BB0B-B5A927C9A2DD}.Debug|iPhone.Build.0 = Debug|iPhone
+		{4E4B27E8-F76B-4150-BB0B-B5A927C9A2DD}.DEBUG|Any CPU.ActiveCfg = DEBUG|Any CPU
+		{4E4B27E8-F76B-4150-BB0B-B5A927C9A2DD}.DEBUG|Any CPU.Build.0 = DEBUG|Any CPU
 		{0A4AD29B-B69B-486C-A012-C8321623C8CD}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
 		{0A4AD29B-B69B-486C-A012-C8321623C8CD}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{0A4AD29B-B69B-486C-A012-C8321623C8CD}.Release|iPhone.ActiveCfg = Release|Any CPU
@@ -31,6 +34,8 @@ Global
 		{0A4AD29B-B69B-486C-A012-C8321623C8CD}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{0A4AD29B-B69B-486C-A012-C8321623C8CD}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{0A4AD29B-B69B-486C-A012-C8321623C8CD}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{0A4AD29B-B69B-486C-A012-C8321623C8CD}.DEBUG|Any CPU.ActiveCfg = DEBUG|Any CPU
+		{0A4AD29B-B69B-486C-A012-C8321623C8CD}.DEBUG|Any CPU.Build.0 = DEBUG|Any CPU
 		{7319A644-72D3-45DB-9732-E4FA5FD8C00C}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
 		{7319A644-72D3-45DB-9732-E4FA5FD8C00C}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{7319A644-72D3-45DB-9732-E4FA5FD8C00C}.Release|iPhone.ActiveCfg = Release|Any CPU
@@ -39,5 +44,7 @@ Global
 		{7319A644-72D3-45DB-9732-E4FA5FD8C00C}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{7319A644-72D3-45DB-9732-E4FA5FD8C00C}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{7319A644-72D3-45DB-9732-E4FA5FD8C00C}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{7319A644-72D3-45DB-9732-E4FA5FD8C00C}.DEBUG|Any CPU.ActiveCfg = DEBUG|Any CPU
+		{7319A644-72D3-45DB-9732-E4FA5FD8C00C}.DEBUG|Any CPU.Build.0 = DEBUG|Any CPU
 	EndGlobalSection
 EndGlobal

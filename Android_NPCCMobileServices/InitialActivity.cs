@@ -27,7 +27,7 @@ namespace Android_NPCCMobileServices
 
             if (isAuth)
             {
-                StartActivity(typeof(MainActivity));
+                StartActivity(typeof(HomeActivity));
                 Finish();
             }
             else

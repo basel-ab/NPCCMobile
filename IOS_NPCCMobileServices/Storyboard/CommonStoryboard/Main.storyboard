@@ -86,6 +86,19 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14205">
+                                <rect key="frame" x="16" y="489" width="170" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47058823529411764" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="14206"/>
+                                </constraints>
+                                <state key="normal" title="side menu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue id="14436" destination="14180" kind="show"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -101,6 +114,8 @@
                             <constraint firstItem="9670" firstAttribute="top" secondItem="8280" secondAttribute="bottom" constant="30" id="9673"/>
                             <constraint firstItem="10196" firstAttribute="leading" secondItem="396" secondAttribute="leadingMargin" id="10198"/>
                             <constraint firstItem="10196" firstAttribute="top" secondItem="9670" secondAttribute="bottom" constant="30" id="11569"/>
+                            <constraint id="14210" firstItem="14205" firstAttribute="top" secondItem="10196" secondAttribute="bottom" constant="21"/>
+                            <constraint id="14211" firstItem="14205" firstAttribute="leading" secondItem="396" secondAttribute="leadingMargin"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RAe-bM-dyx"/>
@@ -320,6 +335,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13845" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="585" y="687.6627"/>
+        </scene>
+        <scene sceneID="14179">
+            <objects>
+                <viewController id="14180" sceneMemberID="viewController" customClass="sideMenuController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="14177"/>
+                        <viewControllerLayoutGuide type="bottom" id="14178"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="14181">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="21018" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="60" y="102" width="100" height="30"/>
+                                <state key="normal" title="side menu"/>
+                                <constraints>
+                                    <constraint id="21021" firstItem="21018" firstAttribute="width" constant="100"/>
+                                </constraints>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint id="21019" firstItem="21018" firstAttribute="leading" secondItem="14181" secondAttribute="leadingMargin" constant="44"/>
+                            <constraint id="21020" firstItem="21018" firstAttribute="top" secondItem="14177" secondAttribute="bottom" constant="38"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnSideButton" destination="21018" id="name-outlet-21018"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14182" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="673"/>
         </scene>
     </scenes>
     <resources>

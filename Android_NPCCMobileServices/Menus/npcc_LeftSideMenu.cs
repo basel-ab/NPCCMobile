@@ -5,14 +5,14 @@ using Android.Widget;
 
 namespace Android_NPCCMobileServices
 {
-    public class clsLeftSideMenu
+    public class npcc_LeftSideMenu
     {
         private const string Val1 = "Val1";
         private const string Val2 = "Val2";
         private const string DEPT_NAME = "dept_name";
         private Android.Content.Context context;
 
-        public clsLeftSideMenu(Android.Content.Context sender)
+        public npcc_LeftSideMenu(Android.Content.Context sender)
         {
             context = sender;
         }
